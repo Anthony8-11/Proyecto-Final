@@ -1,0 +1,34 @@
+﻿<Page x:Class="ProyectoFinalPG2.Form"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProyectoFinalPG2"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Form">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="0" Grid.Row="0" Background="Azure" TextAlignment="Center" FontSize="48">Nombre</TextBlock>
+        <TextBox Grid.Column="1" Grid.Row="0" Name="txtNombre" FontSize="48"></TextBox>
+        <TextBlock Grid.Column="0" Grid.Row="1" Background="Azure" TextAlignment="Center" FontSize="48">Fecha Compra</TextBlock>
+        <DatePicker Grid.Column="1" Grid.Row="1" Name="txtFecha" FontSize="36"></DatePicker>
+        <TextBlock Grid.Column="0" Grid.Row="2" Background="Azure" TextAlignment="Center" FontSize="48">Precio</TextBlock>
+        <TextBox Grid.Column="1" Grid.Row="2" Name="txtPrecio" FontSize="48"></TextBox>
+        <TextBlock Grid.Column="0" Grid.Row="3" Background="Azure" TextAlignment="Center" FontSize="48">Estudio</TextBlock>
+        <TextBox Grid.Column="1" Grid.Row="3" Name="txtEstudio" FontSize="48"></TextBox>
+
+        <Button Grid.Row="4" Grid.Column="1" Click="Button_Click" FontSize="48">Guardar</Button>
+    </Grid>
+</Page>

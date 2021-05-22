@@ -1,0 +1,54 @@
+﻿<Page x:Class="ProyectoFinalPG2.MenuLista"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProyectoFinalPG2"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MenuLista">
+
+    <Grid ShowGridLines="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition>
+                
+            </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30">
+                
+            </RowDefinition>
+            <RowDefinition>
+                
+            </RowDefinition>
+        </Grid.RowDefinitions>
+        <Button Grid.Column="0" Grid.Row="0" Width="100" HorizontalAlignment="Right" Height="30" VerticalAlignment="Bottom" Click="Button_Click">Nuevo</Button>
+        <Button Grid.Column="0" Grid.Row="0" Width="100" HorizontalAlignment="Left" Height="30" VerticalAlignment="Bottom" Click="Button_Exportar">Exportar</Button>
+        <DataGrid Name="DG" AutoGenerateColumns="False" IsReadOnly="True" Grid.Column="0" Grid.Row="1">
+            <DataGrid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </DataGrid.Background>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Registro ID" Binding="{Binding ID}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Fecha Compra" Binding="{Binding FechaCompra}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Precio" Binding="{Binding Precio}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Estudio" Binding="{Binding Estudio}"></DataGridTextColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel>
+                                <Button CommandParameter="{Binding ID}" Click="Button_Click_1">Eliminar</Button>
+                                <Button CommandParameter="{Binding ID}" Click="Button_Editar">Editar</Button>
+                     
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

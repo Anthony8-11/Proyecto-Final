@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="masterModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TB_Videogames">
+    <Key>
+      <PropertyRef Name="VG_ID" />
+    </Key>
+    <Property Name="VG_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VG_Nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="VG_FechaCompra" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="VG_Precio" Type="Int32" Nullable="false" />
+    <Property Name="VG_Estudio" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="VideoGamesEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TB_Videogames" EntityType="Self.TB_Videogames" />
+  </EntityContainer>
+</Schema>

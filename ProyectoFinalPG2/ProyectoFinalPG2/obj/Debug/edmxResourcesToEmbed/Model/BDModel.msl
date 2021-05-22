@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="masterModelStoreContainer" CdmEntityContainer="VideoGamesEntities">
+    <EntitySetMapping Name="TB_Videogames">
+      <EntityTypeMapping TypeName="masterModel.TB_Videogames">
+        <MappingFragment StoreEntitySet="TB_Videogames">
+          <ScalarProperty Name="VG_ID" ColumnName="VG_ID" />
+          <ScalarProperty Name="VG_Nombre" ColumnName="VG_Nombre" />
+          <ScalarProperty Name="VG_FechaCompra" ColumnName="VG_FechaCompra" />
+          <ScalarProperty Name="VG_Precio" ColumnName="VG_Precio" />
+          <ScalarProperty Name="VG_Estudio" ColumnName="VG_Estudio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
